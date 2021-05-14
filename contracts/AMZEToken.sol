@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
+import "./access/Ownable.sol";
+import "./security/Pausable.sol";
+import "./access/AccessControl.sol";
+import "./token/ERC20/ERC20.sol";
+import "./token/ERC20/extensions/ERC20Burnable.sol";
+import "./token/ERC20/extensions/ERC20Snapshot.sol";
+import "./token/ERC20/extensions/draft-ERC20Permit.sol";
 
 contract AMZEToken is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable, AccessControl, ERC20Permit   {
     uint256 private _totalSupply = 270000000; 
